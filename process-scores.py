@@ -43,7 +43,7 @@ for result in scoreTag:
 
           #print("Score: " + str(tempScore))
           toWrite+="," + str(tempRank)+ "," + str(tempScore)
-     print(toWrite)
+     print(toWrite.encode('ascii', 'ignore'))
      
      with open("./processed-score-data.csv", "a") as f:
           f.write(toWrite.encode('ascii', 'ignore')+"\n")
