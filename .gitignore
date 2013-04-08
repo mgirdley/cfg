@@ -1,2 +1,18 @@
 
 cfg/.DS_Store
+
+cfg/*.csv
+working/*.csv
+athletes/1*
+athletes/2*
+athletes/3*
+athletes/4*
+athletes/5*
+athletes/6*
+athletes/7*
+athletes/8*
+athletes/9*
+athletes/0*
+leaderboard/l*
+
+*.txt
