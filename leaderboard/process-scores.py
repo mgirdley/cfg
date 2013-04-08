@@ -30,12 +30,17 @@ for result in scoreTag:
      nextScore=result.find_all_next("span", {"display"}, limit=5)
      for scores in nextScore:
           #print(scores.getText())
+          tempRank=scores.getText()
+          tempRank=tempRank[:tempRank.find('(')-1]
+          if (tempRank.find('--')==0):
+               tempRank="-1"
+
           tempScore=scores.getText()
           tempScore=tempScore[tempScore.find('(')+1:tempScore.find(')')]
           if (tempScore.find('--')==0):
-               tempScore="0"
+               tempScore="-1"
           #print("Score: " + str(tempScore))
-          toWrite+="," + str(tempScore)
+          toWrite+="," + str(tempRank) + "," + str(tempScore)
      print(toWrite)
      
      with open("./processed-score-data.csv", "a") as f:
